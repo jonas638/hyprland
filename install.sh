@@ -45,7 +45,7 @@ cloneRepo() {
         printf "%b\n" "${RED}:: Failed to install git.${RC}"
         exit 1
     }
-    git clone https://github.com/nnyyxxxx/hyprland "$HOME/hyprland" >/dev/null 2>&1 || {
+    git clone https://github.com/jonas638/hyprland "$HOME/hyprland" >/dev/null 2>&1 || {
         printf "%b\n" "${RED}:: Failed to clone hyprland.${RC}"
         exit 1
     }

@@ -76,17 +76,17 @@ installAURHelper() {
             printf "%b\n" "${RED}:: Failed to install build dependencies.${RC}"
             exit 1
         }
-        git clone https://aur.archlinux.org/paru-bin.git "$HOME/paru-bin" >/dev/null 2>&1 || { printf "%b\n" "${RED}:: Failed to clone paru.${RC}"; }
-        cd "$HOME/paru-bin"
+        git clone https://aur.archlinux.org/yay-bin.git "$HOME/yay-bin" >/dev/null 2>&1 || { printf "%b\n" "${RED}:: Failed to clone yay.${RC}"; }
+        cd "$HOME/yay-bin"
         printf "%b\n" "${YELLOW}:: Building paru...${RC}"
         makepkg -si --noconfirm >/dev/null 2>&1
         cd "$HOME"
-        rm -rf "$HOME/paru-bin"
+        rm -rf "$HOME/yay-bin"
         printf "%b\n" "${GREEN}:: Paru installed successfully${RC}"
     fi
 
     printf "%b\n" "${GREEN}:: Using paru as AUR helper${RC}"
-    AUR_HELPER="paru"
+    AUR_HELPER="yay"
 }
 
 setSysOps() {

@@ -239,7 +239,7 @@ warning
 setEscalationTool
 requestElevation
 moveToHome
-#cloneRepo
+cloneRepo
 declareFuncs
 installAURHelper
 setSysOps

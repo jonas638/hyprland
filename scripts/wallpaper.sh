@@ -300,15 +300,15 @@ EOF
 
             pkill hyprlock
 
-            if [ ! -w /opt/spotify ] || [ ! -w /opt/spotify/Apps ]; then
-                pkexec chmod a+wr /opt/spotify
-                pkexec chmod a+wr /opt/spotify/Apps -R
-            fi
-
-            mkdir -p ~/.config/spotify
-            touch ~/.config/spotify/prefs
-
-            cat >~/.config/spicetify/Themes/Sleek/color.ini <<EOF
+#            if [ ! -w /opt/spotify ] || [ ! -w /opt/spotify/Apps ]; then
+#                pkexec chmod a+wr /opt/spotify
+#                pkexec chmod a+wr /opt/spotify/Apps -R
+#            fi
+#
+#            mkdir -p ~/.config/spotify
+#            touch ~/.config/spotify/prefs
+#
+#            cat >~/.config/spicetify/Themes/Sleek/color.ini <<EOF
 [Pywal]
 text               = ${color7}
 subtext            = ${color7}
@@ -328,14 +328,15 @@ notification-error = ${color1}
 misc              = ${color2}
 EOF
 
-            /home/$USER/.spicetify/spicetify config current_theme Sleek
-            /home/$USER/.spicetify/spicetify config color_scheme Pywal
-            /home/$USER/.spicetify/spicetify apply
-
-            if hyprctl clients | grep "Spotify"; then
-                /home/$USER/.spicetify/spicetify watch -s &
-                sleep 1 && pkill spicetify
-            fi
+ #           /home/$USER/.spicetify/spicetify config current_theme Sleek
+ #           /home/$USER/.spicetify/spicetify config color_scheme Pywal
+ #           /home/$USER/.spicetify/spicetify apply
+#
+#            if hyprctl clients | grep "Spotify"; then
+#                /home/$USER/.spicetify/spicetify watch -s &
+#                sleep 1 && pkill spicetify
+#
+#			fi
 
             last_value="$current_value"
         fi

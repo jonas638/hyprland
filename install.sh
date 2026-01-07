@@ -123,7 +123,7 @@ installDeps() {
     current_step=$((current_step + 1))
 
     $AUR_HELPER -S --needed --noconfirm \
-        cava pipes.sh checkupdates-with-aur librewolf-bin hyprwall-bin wlogout \
+        cava pipes.sh checkupdates-with-aur librewolf-bin waypaper-bin hyprwall-bin wlogout \
         python-pywalfox-librewolf spotify vesktop-bin hyprlauncher-bin >/dev/null 2>&1 || { printf "%b\n" "${RED}:: Failed to install AUR dependencies.${RC}"; }
     printf "%b\n" "${GREEN}:: AUR dependencies installed (${current_step}/${total_steps})${RC}"
 }

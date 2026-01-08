@@ -64,7 +64,7 @@ installAURHelper() {
 
     if command -v yay >/dev/null 2>&1; then
         printf "%b\n" "${YELLOW}:: Removing yay...${RC}"
-        $ESCALATION_TOOL pacman -Rns --noconfirm yay >/dev/null 2>&1 || {
+        $ESCALATION_TOOL pacman -Rns --noconfirm yay-bin >/dev/null 2>&1 || {
             printf "%b\n" "${RED}:: Failed to remove yay.${RC}"
             exit 1
         }

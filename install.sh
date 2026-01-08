@@ -197,12 +197,12 @@ setupConfigurations() {
     ln -sf "$HYPRLAND_DIR/hypr" "$XDG_CONFIG_HOME/hypr" >/dev/null 2>&1 || { printf "%b\n" "${RED}:: Failed to set up hypr configuration.${RC}"; }
     ln -sf "$HYPRLAND_DIR/extra/kitty" "$XDG_CONFIG_HOME/kitty" >/dev/null 2>&1 || { printf "%b\n" "${RED}:: Failed to set up kitty configuration.${RC}"; }
     ln -sf "$HYPRLAND_DIR/extra/waybar" "$XDG_CONFIG_HOME/waybar" >/dev/null 2>&1 || { printf "%b\n" "${RED}:: Failed to set up waybar configuration.${RC}"; }
-    ln -sf "$HYPRLAND_DIR/extra/hyprwall" "$XDG_CONFIG_HOME/hyprwall" >/dev/null 2>&1 || { printf "%b\n" "${RED}:: Failed to set up hyprwall configuration.${RC}"; }
+    ln -sf "$HYPRLAND_DIR/extra/waypaper" "$XDG_CONFIG_HOME/waypaper" >/dev/null 2>&1 || { printf "%b\n" "${RED}:: Failed to set up waypaper configuration.${RC}"; }
     ln -sf "$HYPRLAND_DIR/extra/dunst" "$XDG_CONFIG_HOME/dunst" >/dev/null 2>&1 || { printf "%b\n" "${RED}:: Failed to set up dunst configuration.${RC}"; }
     ln -sf "$HYPRLAND_DIR/extra/wlogout" "$XDG_CONFIG_HOME/wlogout" >/dev/null 2>&1 || { printf "%b\n" "${RED}:: Failed to set up wlogout configuration.${RC}"; }
     ln -sf "$HYPRLAND_DIR/extra/hyprlauncher" "$XDG_CONFIG_HOME/hyprlauncher" >/dev/null 2>&1 || { printf "%b\n" "${RED}:: Failed to set up hyprlauncher configuration.${RC}"; }
 
-    cp -R "$HYPRLAND_DIR/extra/vesktop/discord-pywal.css" "$XDG_CONFIG_HOME/wal/templates" >/dev/null 2>&1 || { printf "%b\n" "${RED}:: Failed to set up discord-pywal.css.${RC}"; }
+#    cp -R "$HYPRLAND_DIR/extra/vesktop/discord-pywal.css" "$XDG_CONFIG_HOME/wal/templates" >/dev/null 2>&1 || { printf "%b\n" "${RED}:: Failed to set up discord-pywal.css.${RC}"; }
 
     systemctl --user enable pipewire >/dev/null 2>&1 || { printf "%b\n" "${RED}:: Failed to set up pipewire.${RC}"; }
     systemctl --user enable pipewire-pulse >/dev/null 2>&1 || { printf "%b\n" "${RED}:: Failed to set up pipewire-pulse.${RC}"; }
